@@ -623,16 +623,16 @@ class User {
                     // Show success message with username using custom notification
                     showNotification(
                         "Registration Successful",
-                        `Your account has been created! Your username is "${user.username}". You will be redirected to the login page.`
+                        `Your account has been created! Your username is "<span class="text-primary fw-bold">${user.username}</span>". You will be redirected to the login page.`
                     );
 
                     // Hide error message div if it was showing
                     errorMessageDiv.hide();
 
-                    // Redirect to login page after 2 seconds
+                    // Redirect to login page after 5 seconds
                     setTimeout(function () {
                         window.location.href = "login.html";
-                    }, 2000);
+                    }, 5000);
                 }
             });
         }
